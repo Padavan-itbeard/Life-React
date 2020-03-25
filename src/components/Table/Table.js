@@ -59,8 +59,6 @@ class Table extends React.Component {
     return nextTable;
   }
   createTable() {
-    const l = this.length;
-    let ctx = this.canv.current.getContext("2d");
     const table = this.make2DArray();
     this.drawTable(table)
     return table;
