@@ -9,7 +9,7 @@ class App extends React.Component {
         <h1>Игра «Жизнь»</h1>
         <p>Игра «Жизнь» (англ. Conway's Game of Life) — клеточный автомат, <br/>придуманный английским математиком Джоном Конвеем в 1970 году.</p>
         <Timer />
-        <Table width={600} height={700}/>
+        <Table width={400} height={400}/>
       </>
     )
   }
