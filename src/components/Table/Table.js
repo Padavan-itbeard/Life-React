@@ -17,7 +17,7 @@ class Table extends React.Component {
     this.setState({
       table: this.createTable(),
     });
-    this.intervalId = setInterval(this.timer.bind(this), 1000)
+    this.intervalId = setInterval(this.timer.bind(this), 100)
   }
   componentWillUnmount() {
     clearInterval(this.intervalId);
@@ -30,19 +30,23 @@ class Table extends React.Component {
   }
   countNeighbords(table, r, c) {
     let sum = 0;
-    for (let i = -1; i < 2; i += 1)
-      for (let j = -1; j < 2; j += 1)
-        sum += table[i + r][j + c];
+    for (let i = -1; i < 2; i += 1) {
+      for (let j = -1; j < 2; j += 1) {
+        let col = (c + j + this.cols) % this.cols;
+        let row = (r + i + this.rows) % this.rows;
+        sum += table[row][col];
+      }
+    }
     sum -= table[r][c];
     return sum;
   }
   lifeCicle() {
     const nextTable = this.make2DArray();
     const table = this.state.table;
-    for (let r = 1; r < table.length - 1; r += 1)
-      for (let c = 1; c < table[0].length - 1; c += 1) {
-        const count = this.countNeighbords(table, r, c);
+    for (let r = 0; r < table.length; r += 1)
+      for (let c = 0; c < table[0].length; c += 1) {
         const current = table[r][c];
+        const count = this.countNeighbords(table, r, c);
         if (current === 0 && count === 3) {
           nextTable[r][c] = 1;
         } else if (current === 1 && (count < 2 || count > 3)) {
@@ -68,11 +72,10 @@ class Table extends React.Component {
     for (let r = 0; r < table.length; r += 1)
       for (let c = 0; c < table[0].length; c += 1)
         if (table[r][c] === 0) {
-          ctx.beginPath();
-          ctx.rect(c * l, r * l, l, l);
-          ctx.stroke();
+          ctx.fillStyle = 'white';
+          ctx.fillRect(c * l, r * l, l, l);
         } else {
-          ctx.fillStyle = 'black'
+          ctx.fillStyle = 'black';
           ctx.fillRect(c * l, r * l, l, l);
         }
   }
