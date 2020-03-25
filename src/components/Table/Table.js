@@ -9,9 +9,9 @@ class Table extends React.Component {
     }
     this.intervalId = 0;
     this.canv = React.createRef();
-    this.length = 10;
-    this.cols = Math.trunc(this.props.width / 10);
-    this.rows = Math.trunc(this.props.height / 10);
+    this.length = 4;
+    this.cols = Math.trunc(this.props.width / this.length);
+    this.rows = Math.trunc(this.props.height / this.length);
   }
   componentDidMount() {
     this.setState({
