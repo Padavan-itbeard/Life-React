@@ -9,7 +9,7 @@ class Table extends React.Component {
     }
     this.intervalId = 0;
     this.canv = React.createRef();
-    this.length = 4;
+    this.length = 5;
     this.cols = Math.trunc(this.props.width / this.length);
     this.rows = Math.trunc(this.props.height / this.length);
   }
@@ -26,7 +26,6 @@ class Table extends React.Component {
     this.setState({
       table: this.lifeCicle(),
     });
-    console.log(1);
   }
   countNeighbords(table, r, c) {
     let sum = 0;
