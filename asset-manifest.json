@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Life-React/static/css/main.cc0d1c34.chunk.css",
+    "main.js": "/Life-React/static/js/main.27608a5e.chunk.js",
+    "main.js.map": "/Life-React/static/js/main.27608a5e.chunk.js.map",
+    "runtime-main.js": "/Life-React/static/js/runtime-main.ae2a427d.js",
+    "runtime-main.js.map": "/Life-React/static/js/runtime-main.ae2a427d.js.map",
+    "static/js/2.dfdc88d6.chunk.js": "/Life-React/static/js/2.dfdc88d6.chunk.js",
+    "static/js/2.dfdc88d6.chunk.js.map": "/Life-React/static/js/2.dfdc88d6.chunk.js.map",
+    "index.html": "/Life-React/index.html",
+    "precache-manifest.e79ca1be28652ab5137301270e5010b1.js": "/Life-React/precache-manifest.e79ca1be28652ab5137301270e5010b1.js",
+    "service-worker.js": "/Life-React/service-worker.js",
+    "static/css/main.cc0d1c34.chunk.css.map": "/Life-React/static/css/main.cc0d1c34.chunk.css.map",
+    "static/js/2.dfdc88d6.chunk.js.LICENSE.txt": "/Life-React/static/js/2.dfdc88d6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae2a427d.js",
+    "static/js/2.dfdc88d6.chunk.js",
+    "static/css/main.cc0d1c34.chunk.css",
+    "static/js/main.27608a5e.chunk.js"
+  ]
+}
